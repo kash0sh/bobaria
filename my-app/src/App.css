@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&family=Concert+One&family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+*
+.video-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    z-index: 1;
+}
+
+.video {
+    width: 100%; /* Adjust to control size */
+    max-width: 1400px;
+    max-height: 780px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: #000;
+    opacity: 0.9;
+}
+
+/* Overlay for Text and Button */
+.video-overlay {
+    position: absolute;
+    bottom: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .overlay-heading {
+    font-family:'Tangerine',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .overlay-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #6B4F3A;
+    background-color: #fff6e6;
+    border: 2px solid #6B4F3A;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay-button:hover {
+    background-color: #6B4F3A;
+    color: #fff;
+    border-color: #6B4F3A;
+  }
+
+  .freshly-baked-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 4.5rem;
+    max-width: 1400px;
+    margin: 0.5rem auto;
+}
+
+.freshly-baked-heading {
+    font-family: "Quicksand";
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.navigation-arrows {
+    display: flex;
+    gap: 10px;
+    border-width: 2px;
+}
+
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff6e6;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.arrow-button:hover:not(:disabled) {
+    background-color: #fff6e6;
+}
+
+.arrow-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.product-card {
+  min-width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  border-radius: 10px;
+  width: 88vw;
+  max-width: 550px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px; /* Adjust padding for better centering */
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.product-card-image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  background-color: antiquewhite;
+  border-radius: 10%;
+  padding: 20px;
+}
+
+.product-card-image {
+  width: 30%;
+  height: 98%;
+  border-radius: 10px;
+}
+
+.product-card-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(226, 141, 141);
+  padding: 2px 5px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.product-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-card-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.product-card-price {
+  font-size: 1em;
+  color: #333;
+}
+
+.carousel-container {
+  padding-left: 20px;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.material-symbols-outlined{
+  background-color: #fff6e6;
+}
+
+.where-to-buy-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0; /* Adjust padding as needed */
+}
+
+.where-to-buy-button {
+  display: flex;
+  font-family: 'Quicksand','Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  padding: 15px 525px;
+  color: #6B4F3A;
+  background-color: transparent;
+  border: 1px solid #6B4F3A;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.where-to-buy-button:hover {
+  background-color: #6B4F3A;
+  color: #fff;
+}
+
+.centered-text-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #fff6e6;
+  align-items: center;
+}
+
+.centered-text-box {
+  border: 1px solid #6B4F3A; /* Accent border */
+  border-radius: 15px;
+  padding: 100px 50px; /* Vertical padding adjusted */
+  max-width: 90%;
+  width: 100%;
+  text-align: center;
+  background-color: #fff6e6; /* White background for the text box */
+
+}
+
+.centered-text-content {
+  font-family: 'Quicksand','Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.centered-text-section .centered-text-content {
+  font-size: 1.5rem; /* Adjust for mobile or smaller screens */
+}
+
+/* Ensure responsiveness for larger screens */
+@media (min-width: 768px) {
+  .centered-text-content {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* Outer Wrapper for Marquee */
+.marquee-wrapper {
+  padding: 2rem 65px; /* Adds 50px padding on the left and right */
+  overflow: hidden; /* Ensures content stays within the visible area */
+  width: 100%; /* Ensures it takes full width */
+  box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+/* Marquee Container */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Marquee Text */
+.marquee-text {
+  font-family: "Poppins", "Noto Color Emoji";
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 110%;
+  white-space: nowrap;
+  margin-right: 5rem; /* Space between each item */
+  color: #6B4F3A;
+}
+
+
+
+
+.shop-heading-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: left;
+  padding: 0 4rem;
+}
+
+.shop-heading {
+  font-family: 'Quicksand', 'Cambria', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/* Container */
+.container {
+  overflow: hidden;
+  padding: 0 4rem;
+  display: flex;
+
+}
+
+/* Scrollable container */
+.scrollable-container {
+  display: flex;
+  gap: 1rem;
+  transform: translate3d(0, 0, 0);
+  overflow-x: auto;
+  white-space: nowrap; /* Prevents wrapping */
+
+  z-index: 1;
+}
+
+
+/* Item container */
+.item {
+  display: inline-flex; /* Allows items to display in a row within the scrollable container */
+  padding-top: 0.25rem;
+  gap: 1rem;
+  padding-bottom: 2rem;
+
+
+}
+
+/* Link styling */
+.item-link {
+  position: relative;
+  display: flex;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  width: 88vw;
+  min-width: 320px;
+  max-width: 405px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: antiquewhite;
+
+
+}
+
+/* Image styling */
+.item-image {
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  max-width: 287px;
+  border-radius: 0.5rem;
+  object-position: center;
+  margin-left: 65px;
+}
+
+/* Text overlay container */
+.text-overlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+/* Wrapper for text background and text */
+.text-wrapper {
+  display: flex;
+  position: relative;
+  height: 80px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* SVG background */
+.text-background {
+  position: absolute;
+  height: 100%;
+  width: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 0.3s ease;
+}
+
+.text-background .path {
+  fill: #fff6e6; /* Background color */
+  stroke: #6B4F3A;
+  stroke-width: 1.5;
+}
+
+/* Text styling */
+.text {
+  font-family: "Quicksand";
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  z-index: 1;
+  color: #6B4F3A;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+/* Hover effect */
+.item-link:hover .text {
+  color: #ffffff; /* Text color on hover */
+
+}
+
+.item-link:hover .text-background .path {
+  fill: #6B4F3A; /* Background color on hover */
+
+}
+
+.how-to-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 60px; /* Adjust padding if needed */
+}
+
+.how-to-centered-text-section {
+  flex: 1; /* Take equal space as the image container */
+  display: flex;
+  justify-content: flex-start; /* Align to the left, or you can use center depending on design */
+  align-items: flex-start; /* Align content to the top */
+  padding: 2rem 0;
+
+}
+
+.how-to-centered-text-box {
+  width: 100%; /* Make the text box take up 100% of the container */
+  max-width: 100%; /* Ensure it doesn't exceed container's width */
+  padding: 0; /* Remove padding to eliminate the gap */
+  border: 1px solid #6B4F3A; /* Accent border */
+  border-radius: 15px;
+  text-align: center;
+}
+
+.how-to-text {
+  font-family: "Quicksand";
+  font-size: 1.5rem; /* Adjust as needed */
+  font-weight: 500; /* Adjust text style as needed */
+  margin-top: 30px;
+  color: #6B4F3A /* Remove margin to eliminate any space above the text */
+}
+
+.how-to-container {
+  font-family: "Quicksand";
+  font-size: 2rem;
+  color: #6B4F3A;
+  min-height: 535px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  flex: 1; /* Take equal space as the text box */
+  width: 90%; /* Ensure the image takes up full width of its container */
+}
+
+.image-container img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* Set max-height for image */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #6B4F3A;
+  padding: 20px;
+  text-align: center;
+  min-height: 200px;
+}
+
+.textoffooter{
+  font-family: "Poppins";
+  color: white;
+}
+
+.footer .textoffooter h1 {
+  font-size: 2rem; /* Larger font size for the h1 */
+  font-weight: bold;
+  margin: 10px 0 10px; /* Adds spacing around the h1 */
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+

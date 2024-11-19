@@ -1,0 +1,58 @@
+/* OrderConfirmation Styles */
+
+.confirmation-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background: #FAF4EE; /* Soft beige */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.confirmation-container h2 {
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #6B4F3A;
+}
+
+.confirmation-container p {
+  font-size: 1.2rem;
+  color: #6B4F3A;
+  margin-bottom: 30px;
+}
+
+/* Order Status Styling */
+.confirmation-container h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #8C6046;
+}
+
+.confirmation-container p strong {
+  font-weight: bold;
+  color: #D2691E; /* Highlighted color for the status text */
+}
+
+/* Summary Item List */
+.confirmation-container p.item {
+  font-size: 1.1rem;
+  color: #4F3A2F;
+  margin: 10px 0;
+}
+
+/* Highlighted Total */
+.confirmation-container h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6B4F3A;
+  margin-top: 20px;
+}
+
+/* Optional Delivery/Address Styling */
+.confirmation-container p.delivery-info {
+  font-size: 1.1rem;
+  color: #4F3A2F;
+}

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff6e6;
+    min-height: 200vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* Space out logo and buttons */
+    align-items: center;
+    padding: 0 75px;
+    z-index: 100;
+    background-color:#fff6e6;
+    transition: background-color 0.3s ease;
+}
+
+header.sticky {
+    border-bottom: 2.5px solid #6B4F3A;
+    background-color: #fff6e6;
+}
+
+header .logo {
+    font-weight: 1000;
+    color: #6B4F3A;
+    text-decoration: none;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #473D36;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #6B4F3A;
+}
+
+/* Profile and Cart Buttons Container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;  /* Space between profile and cart buttons */
+}
+
+/* Profile Button */
+.profile-btn, .shopping-cart {
+    background-color: #fff6e6;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-btn .material-symbols-outlined, .shopping-cart .material-symbols-outlined {
+    font-size: 28px;
+    color: #6B4F3A;
+}
+
+.profile-btn:hover, .shopping-cart:hover {
+    background-color: rgb(138, 100, 49);  /* Slight change for hover effect */
+    color: white;
+    transform: scale(1.1);  /* Slight zoom effect */
+}
+
+/* Cart Icon Styles */
+.shopping-cart {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.cart-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: rgb(138, 100, 49);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;  /* Higher than header to avoid overlap */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+button[type="submit"] {
+    background-color: burlywood;
+    color: black;
+    border: none;
+}
+button[type="submit"]:hover {
+    background-color: rgb(138, 100, 49); /* Change the background color on hover */
+    color: white; /* Change the text color on hover */
+}
+
+button[type="button"] {
+    background-color: burlywood;
+    color: black;
+    border: none;
+    margin-top: 10px;
+}
+button[type="button"]:hover {
+    background-color: rgb(138, 100, 49); /* Change the background color on hover */
+    color: white; /* Change the text color on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    header .logo {
+        font-size: 2.5em;
+    }
+
+    header ul {
+        margin-left: 20px;
+    }
+
+    header ul li a {
+        font-size: 0.9em;
+    }
+
+    .button-container {
+        gap: 10px;
+    }
+
+    .profile-btn, .shopping-cart {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* navbar.css */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .menu-item {
+    text-align: center;
+  }
+  
+  .cart-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  
